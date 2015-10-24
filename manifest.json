@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "background": {
-      "scripts": [ "popup.js"]
+      "scripts": [ "background.js"]
    },
 
   "name": "Redirect Link Checker",
@@ -12,7 +12,6 @@
    
    
   },
-  "permissions": [
-   "activeTab"
-   ]
+  "permissions": [ "storage", "tabs","activeTab", "http://*/*", "https://*/*" ]
+  
 }
