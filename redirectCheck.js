@@ -160,9 +160,10 @@ function getReport(){
 
 }
 
-chrome.extension.onMessage.addListener(function(){
+chrome.extension.onMessage.addListener(function redirectCheck(){
 	var report;
 	var id = document.getElementById("RLC_content");
+	chrome.extension.onMessage.removeListener(redirectCheck);
 	if(!id){
 		
 		createStyle();
@@ -170,6 +171,7 @@ chrome.extension.onMessage.addListener(function(){
 	}else{
 		report = getReport();
 	}
+	
 	var count =0;
 	var total = 0,queue=0;
 	var okCount=0;

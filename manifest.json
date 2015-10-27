@@ -9,9 +9,12 @@
   "version": "1.0",
 
   "browser_action": {
-   
+  
    
   },
+  "icons": {
+      "128": "icon.png"
+   },
   "permissions": [ "storage", "tabs","activeTab", "http://*/*", "https://*/*" ]
   
 }
